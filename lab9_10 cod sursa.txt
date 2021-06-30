@@ -1,0 +1,382 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+char guess;
+int total;
+
+
+
+class Question{
+public:
+    void setValues(std::string, std::string, std::string, std::string, std::string, char, int);
+    void askQuestion();
+
+private:
+    std::string Question_Text;
+    std::string answer_1;
+    std::string answer_2;
+    std::string answer_3;
+    std::string answer_4;
+
+    char correct_answer;
+    int Question_Score;
+};
+
+int main()
+{
+
+
+    std::cout << "Apasa enter pentru a incepe... :)\n";
+    std::cin.get();
+
+    //Se obtine numele utilizatorului.
+    std::string name;
+    std::cout << "Care e numele tau?\n";
+    std::cin >> name;
+    std::cout << "\n";
+
+    //Întreaba utilizatorul daca dorește să înceapă testul.
+    std::string respond;
+    std::cout << "Doresti sa incepi intrebarile? " << name << "? Yes/No.\n";
+    std::cin >> respond;
+
+    //Dacă utilizatorul spune da, începe testul,daca nu,iese din grila
+    if (respond == "Yes" || respond == "yes") {
+        std::cout << "\n";
+        std::cout << "Mult noroc!\n";
+        std::cout << "\n";
+        std::cout << "Apasa enter pentru a continua...";
+        std::cin.get();
+        std::cin.ignore();
+    }else{
+        std::cout << "\n";
+        std::cout << "Goodbye!\n";
+        std::cin.ignore();
+        std::cin.get();
+        return 0;
+    }
+
+    Question q1;
+    Question q2;
+    Question q3;
+    Question q4;
+    Question q5;
+    Question q6;
+    Question q7;
+    Question q8;
+    Question q9;
+    Question q10;
+    Question q11;
+    Question q12;
+    Question q13;
+    Question q14;
+    Question q15;
+    Question q16;
+    Question q17;
+    Question q18;
+    Question q19;
+    Question q20;
+    Question q21;
+    Question q22;
+    Question q23;
+    Question q24;
+    Question q25;
+
+    // Apelarea funcției membre setValues.
+    // Întrebarea este setată, 4 opțiuni de răspuns, răspunsul corect corect, 4 puncte pe întrebare.
+    q1.setValues("1. Care comanda in c++ scrie la ecran?",
+        "cin",
+        "cout",
+        "char",
+        "print",
+        'b',
+        4);
+
+    q2.setValues("2. La care dintre urmatoarele categorii apartine C ++?",
+        "Sistem de operare",
+        "Limbaj de programare la nivel inalt",
+        "limbaj de programare de nivel scazut",
+        "Compiler",
+        'b',
+        4);
+
+    q3.setValues("3. Care comanda este scrisa corect?",
+        "cout >>",
+        "cin <<",
+        "cout <>",
+        "cin >>",
+        'd',
+        4);
+
+    q4.setValues("4. Ce apeleaza aceasta biblioteca, <iostream>?",
+        "directiva",
+        "directiva pre-procesor",
+        "fisiere",
+        "comanda",
+        'b',
+        4);
+
+    q5.setValues("5. Ce punctuatie se pune la capatul majoritatii liniilor de cod?",
+        " . ",
+        " ; ",
+        " : ",
+        " ' ",
+        'b',
+        4);
+
+    q6.setValues("6. Care dintre urmatoarele este un comentariu corect?",
+        "*/ Comentariu */",
+        "** Comentariu **",
+        "/* Comentariu */",
+        "{ Comentariu }",
+        'c',
+        4);
+
+    q7.setValues("7. Care dintre urmatoarele este operatorul boolean logic ?",
+        "&",
+        "|",
+        "&&",
+        "|&",
+        'c',
+        4);
+
+    q8.setValues("8. Care dintre următoarele prezinta sintaxa corecta pentru o instructiune if ?",
+        "if expresie",
+        "if {expresie",
+        "if (expresie)",
+        "expresie if",
+        'c',
+        4);
+
+    q9.setValues("9. De cate ori intra in bucla o instructiune do while?",
+        "1",
+        "0",
+        "de o infinitate de ori",
+        "un numar variabil de ori",
+        'a',
+        4);
+
+    q10.setValues("10. Ce inseamna expresia A(n) ? ",
+        "element dintr-o matrice",
+        "nume alternativ pentru o matrice",
+        "numar care reprezinta cea mai mare valoare stocata intr-o matrice",
+        "numar care indica pozitia elementului particular intr-o matrice",
+        'd',
+        4);
+
+    q11.setValues("11. Care dintre urmatoarele declara corect o matrice ?",
+        "int x[10][10];",
+        "int x",
+        "x{10}{10};",
+        "matrice x[10][10];",
+        'a',
+        4);
+
+    q12.setValues("12. Care este numarul de index al ultimului element al unui tablou cu 29 de elemente?",
+        "29",
+        "28",
+        "0",
+        "programatorul defineste",
+        'b',
+        4);
+
+    q13.setValues("13. Ceea ce nu este o structura de bucla?",
+        "for",
+        "do while",
+        "while",
+        "repeta pana",
+        'd',
+        4);
+
+    q14.setValues("14. Cand se executa urmatoarea instructiune (x <100)?",
+        "Cand x este mai mic de o suta",
+        "Cand x este mai mare de o suta",
+        "Cand x este egal cu o suta",
+        "Cat timp se doreste",
+        'a',
+        4);
+
+    q15.setValues("15. Majoritatea programatorilor folosesc o bucla for __________ .",
+        "pentru fiecare bucla pe care o scriu",
+        "cand o bucla nu se va repeta",
+        "cand nu se stie exact de cate ori se repeta o bucla ",
+        "cand stiu de cate ori se repetă o bucla",
+        'd',
+        4);
+
+    q16.setValues("16. Adaugarea cu 1 la o variabila se numeste.....",
+        "absorptie",
+        "incrementare",
+        "decrementare",
+        "resetare",
+        'b',
+        4);
+
+    q17.setValues("17. Ce este necesar pentru a evita caderea de la un caz la altul?",
+        "end;",
+        "break;",
+        "Stop;",
+        "Un punct si virgula",
+        'b',
+        4);
+
+    q18.setValues("18. Un __________ este o variabila pe care ati setat-o pentru a indica daca a avut loc un eveniment.",
+        "indice",
+        "Cursor",
+        "counter",
+        "steag",
+        'd',
+        4);
+
+    q19.setValues("19. Identificati compilatorul C ++ al Linux.",
+        "cpp",
+        "g++",
+        "Borland",
+        "vc++",
+        'b',
+        4);
+
+    q20.setValues("20. Care este dimensiunea unui 'int'? ",
+        "2",
+        "4",
+        "8",
+        "Dependent de compilator",
+        'd',
+        4);
+
+    q21.setValues("21. Ce tip de date poate fi utilizat pentru a detine un caracter larg în C ++?",
+        "unsigned char;",
+        "int",
+        "wchar",
+        "nici una dintre cele de mai sus.",
+        'c',
+        4);
+
+    q22.setValues("22. C ++ nu accepta urmatoarele",
+        "Mostenirea pe mai multe niveluri",
+        "Mostenirea ierarhica",
+        "Mostenirea hibrida",
+        "Nici una dintre cele de mai sus.",
+        'd',
+        4);
+
+    q23.setValues("23. Care din urmatoarele nu este un nivel de protectie oferit de clasele din C ++?",
+        "protected",
+        "hidden",
+        "private",
+        "public",
+        'b',
+        4);
+
+    q24.setValues("24. In ce scop servesc clasele ?",
+        "incapsularea datelor",
+        "oferind un mod convenabil de modelare a obiectelor din lumea reala",
+        "simplificarea refolosirii codului",
+        "toate cele de mai sus",
+        'd',
+        4);
+
+    q25.setValues("25. Cine a dezvoltat limbajul C ++?",
+        "Steve Jobs",
+        "Linus Torvalds",
+        "Bill Gates",
+        "Bjarne Stroustrup",
+        'd',
+        4);
+
+    //Apelarea funcției de membru askQuestion.
+    q1.askQuestion();
+    q2.askQuestion();
+    q3.askQuestion();
+    q4.askQuestion();
+    q5.askQuestion();
+    q6.askQuestion();
+    q7.askQuestion();
+    q8.askQuestion();
+    q9.askQuestion();
+    q10.askQuestion();
+    q11.askQuestion();
+    q12.askQuestion();
+    q13.askQuestion();
+    q14.askQuestion();
+    q15.askQuestion();
+    q16.askQuestion();
+    q17.askQuestion();
+    q18.askQuestion();
+    q19.askQuestion();
+    q20.askQuestion();
+    q21.askQuestion();
+    q22.askQuestion();
+    q23.askQuestion();
+    q24.askQuestion();
+    q25.askQuestion();
+
+    //Scorul final afișat atunci când utilizatorul termină testul.
+    std::cout << "Scorul dvs. total este " << total << " din 100!\n";
+    std::cout << "\n";
+    if (total > 70) {
+        std::cout << "R(Super,felicitari pentru acest scor !!!)" << "\n";
+        std::cout << "\n";
+        std::cin.get();
+        std::cin.ignore();
+        return 0;
+    }
+    else
+    {
+        std::cout << "Ai eșuat ... Îmi pare rau, mai mult noroc data viitoare.\n";
+        std::cout << "\n";
+    }
+    std::cin.get();
+    std::cin.ignore();
+    return 0;
+}
+
+//Functia intrebari apelata.
+void Question::setValues(std::string q, std::string a1, std::string a2, std::string a3, std::string a4, char ca, int pa)
+{
+    Question_Text = q;
+    answer_1 = a1;
+    answer_2 = a2;
+    answer_3 = a3;
+    answer_4 = a4;
+    correct_answer = ca;
+    Question_Score = pa;
+}
+//Formatul pentru raspunsurile posibile va fi afisat cand programul va rula.
+void Question::askQuestion()
+{
+    std::cout << "\n";
+    std::cout << Question_Text << "\n";
+    std::cout << "a. " << answer_1 << "\n";
+    std::cout << "b. " << answer_2 << "\n";
+    std::cout << "c. " << answer_3 << "\n";
+    std::cout << "d. " << answer_4 << "\n";
+    std::cout << "\n";
+
+    //Userul pune raspunsurile
+    std::cout << "Care este raspunsul tau ?" << "\n";
+    std::cin >> guess;
+    //
+    //Daca raspunsul e corect ,un mesaj va fi afisat si 4 puncte vor fi acordate .
+    if (guess == correct_answer) {
+        std::cout << "\n";
+        std::cout << "Correct!" << "\n";
+        total = total + Question_Score;
+        std::cout << "\n";
+        std::cout << "Apasa enter pentru a continua... :)" << "\n";
+        std::cin.get();
+        std::cin.ignore();
+    }
+    else //If their answer is incorrect, message is displayed, no points added.
+         //Correct answer displayed.
+    {
+        std::cout << "\n";
+        std::cout << "Scuze,dar raspunsul este gresit... :(" << "\n";
+        std::cout << "Raspunsul corect este: " << correct_answer << "." << "\n";
+        std::cout << "\n";
+        std::cout << "Apasa enter pentru a continua... :)" << "\n";
+        std::cin.get();
+        std::cin.ignore();
+    }
+}
